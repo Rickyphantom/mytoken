@@ -1,8 +1,10 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ERC-20 토큰 테스트 앱
 
-## Getting Started
+Next.js를 사용한 ERC-20 토큰 테스트 애플리케이션입니다.
 
-First, run the development server:
+## 시작하기
+
+먼저 개발 서버를 실행하세요:
 
 ```bash
 npm run dev
@@ -14,23 +16,46 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+브라우저에서 [http://localhost:3000](http://localhost:3000)을 열어 확인하세요.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 프로젝트 구조
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+my-token-app/
+├── contract/              # 솔리디티 컨트랙트 파일
+│   └── MyToken.sol
+├── src/
+│   ├── app/              # Next.js 앱 라우터
+│   ├── components/       # React 컴포넌트
+│   ├── lib/              # 유틸리티 및 컨트랙트 인터페이스
+│   └── types/            # TypeScript 타입 정의
+```
+
+## 컨트랙트 관리
+
+이 프로젝트는 `contract/` 폴더에 솔리디티 파일을 보관합니다.
+
+- 컨트랙트는 REMIX IDE나 다른 도구를 통해 배포할 수 있습니다
+- 배포 후 `src/lib/abi.json`과 `src/lib/constants.ts`를 수동으로 업데이트해야 합니다
+
+## 주요 기능
+
+- ✅ 지갑 연결 (MetaMask)
+- ✅ 토큰 정보 조회
+- ✅ 잔액 확인
+- ✅ 토큰 전송 (Transfer)
+- ✅ 토큰 허용 (Approve)
+- ✅ 대리 전송 (TransferFrom)
+- ✅ 토큰 소각 (Burn)
+
+## 기술 스택
+
+- **Frontend**: Next.js 16, React 19, TypeScript, Tailwind CSS
+- **Blockchain**: Ethers.js v6
+- **Smart Contract**: Solidity 0.8.20, OpenZeppelin
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Ethers.js Documentation](https://docs.ethers.org/)
+- [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts)
