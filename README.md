@@ -59,3 +59,4 @@ my-token-app/
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Ethers.js Documentation](https://docs.ethers.org/)
 - [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts)
+"# mytoken" 
