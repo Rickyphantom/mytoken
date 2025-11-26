@@ -1,14 +1,14 @@
-import { contractAddress } from '@/lib/constants'
+import { contractAddress } from '@/lib/constants';
 
 interface HeaderProps {
-  ownerAddress: string | null
+  ownerAddress: string | null;
 }
 
 export default function Header({ ownerAddress }: HeaderProps) {
   return (
     <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
       <h1 className="text-3xl font-bold text-gray-800 mb-4">
-        ERC-20 토큰 테스트 앱
+        ERC-20 토큰 테스트 앱 92113724 유선빈
       </h1>
       <p className="text-gray-600 mb-4">
         Sepolia 테스트넷에 배포된 ERC-20 토큰과 상호작용합니다
@@ -57,6 +57,5 @@ export default function Header({ ownerAddress }: HeaderProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

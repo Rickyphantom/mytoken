@@ -197,6 +197,7 @@ export default function TokenApp() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4 md:p-8">
       <div className="max-w-6xl mx-auto">
         <Header ownerAddress={ownerAddress} />
+        <div className="text-center text-gray-600 mb-4 font-medium">92113724 유선빈</div>
 
         <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
           <WalletConnection
